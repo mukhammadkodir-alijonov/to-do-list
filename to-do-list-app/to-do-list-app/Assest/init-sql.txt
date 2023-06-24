@@ -1,0 +1,19 @@
+﻿create table users(
+	id int generated always as identity primary key,
+	full_name varchar not null,
+	email varchar unique,
+	password_hash text,
+	salt text
+);
+
+create table tasks(
+	id int generated always as identity primary key,
+	title varchar not null,
+	description text,
+	begin_time timestamp,
+	end_time timestamp,
+	status varchar check(status in ('do','doing','done')),
+	owner_id int references users(id),
+	created_at timestamp default now()
+);
+
