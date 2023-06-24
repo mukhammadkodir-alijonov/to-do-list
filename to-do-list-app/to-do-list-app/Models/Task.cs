@@ -1,6 +1,4 @@
-﻿using to_do_list_app.Enums;
-
-namespace to_do_list_app.Models;
+﻿namespace to_do_list_app.Models;
 public class Task
 {
     public int Id { get; set; }
@@ -9,6 +7,6 @@ public class Task
     public DateTime BeginTime { get; set; }
     public DateTime EndTime { get; set; }
     public DateTime CreatedAt { get; set; }
-    public Enums.ProcessStatus Status { get; set; } = Enums.ProcessStatus.Do;
+    public string Status { get; set; } = string.Empty;
     public int OwnerId { get; set; }
 }
