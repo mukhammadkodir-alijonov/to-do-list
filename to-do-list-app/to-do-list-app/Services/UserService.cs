@@ -19,7 +19,7 @@ namespace to_do_list_app.Services
             var user = await _repository.FindByEmailAsync(email);
             if (user is null) return (IsSuccessful: false, Message: "Email is worng!");
             var hashResult = PasswordHasher.Verify(password, user.Salt, user.PasswordHash);
-            if (hashResult) return (IsSuccessful: true, Message: "........");
+            if (hashResult) return (IsSuccessful: true, Message: "....");
             else return (IsSuccessful: false, Message: "Password is worng!");
         }
 
