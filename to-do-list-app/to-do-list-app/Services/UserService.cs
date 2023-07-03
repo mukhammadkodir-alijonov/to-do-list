@@ -34,7 +34,7 @@ namespace to_do_list_app.Services
                 Salt = hashResult.Salt
             };
             var repositoryResult = await _repository.CreateAsync(user);
-            if (repositoryResult) return (IsSuccessful: true, Message: "...");
+            if (repositoryResult) return (IsSuccessful: true, Message: "....");
             else return (IsSuccessful: false, Message: "User can nor created");
 
         }
